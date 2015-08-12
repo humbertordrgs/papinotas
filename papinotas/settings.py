@@ -13,7 +13,9 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+ALLOWED_HOSTS = ['shrouded-wildwood-5251.herokuapp.com']
 
 
 # Quick-start development settings - unsuitable for production
@@ -24,8 +26,6 @@ SECRET_KEY = 'cbxjl0&^h@ip*yu#=+y#0l-g83uku5x4#q&1ostxwnt9gjv+2u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
 
 LOGIN_REDIRECT_URL='/papiSMS'
 # Application definition
@@ -107,3 +107,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = 'staticfiles'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
