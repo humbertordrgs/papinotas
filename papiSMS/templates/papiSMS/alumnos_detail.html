@@ -1,0 +1,4 @@
+<a href="{% url 'papiSMS:Send' 'alumno' alumno.id %}"> <h1>Enviar Mensaje</h1> </a>
+<h1>{{ alumno.nombre }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
