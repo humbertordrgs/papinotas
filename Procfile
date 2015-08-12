@@ -1,1 +1,1 @@
-web: gunicorn
+web: gunicorn --pythonpath papinotas papinotas.wsgi
