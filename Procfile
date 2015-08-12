@@ -1,1 +1,1 @@
-web: gunicorn papinotas.wsgi --log-file -
+web: gunicorn
